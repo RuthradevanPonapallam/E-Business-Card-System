@@ -57,11 +57,9 @@ if (isset($_POST['forgot_password'])) {
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
-            // Recipients
             $mail->setFrom('your_email@example.com', 'E-Business Card System');
             $mail->addAddress($email);            
 
-            // Content
             $mail->isHTML(true);
             $mail->Subject = 'Password Reset Request';
             $mail->Body    = "Hello, <br><br> We received a request to reset your password. Click the link below to reset your password:<br><br><a href='$reset_link'>$reset_link</a><br><br>This link will expire in 1 hour.";
