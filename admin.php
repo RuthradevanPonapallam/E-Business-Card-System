@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['toggle_status'])) {
     }
 }
 
-$query = "SELECT id, username, name, email, status,staffid,  FROM users WHERE username != 'admin'"; // Exclude admin account
+$query = "SELECT id, username, name, email, status,staffid  FROM users WHERE username != 'admin'"; // Exclude admin account
 $result = $conn->query($query);
 ?>
 
